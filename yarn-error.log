@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js add react-router-dom redux react-redux redux-thunk semantic-ui-react semantic-ui-css axios
+
+PATH: 
+  ~/.npm-global/bin:/Users/samuelballard/.rbenv/shims:/Applications/Postgres.app/Contents/Versions/10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/samuelballard/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://registry.npmjs.org/axios/-/axios-0.18.0.tgz: Request failed "403 Forbidden"
+      at ResponseError.ExtendableBuiltin (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:218:66)
+      at new ResponseError (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:324:124)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:61013:26)
+      at Request.emit (events.js:182:13)
+      at Request.module.exports.Request.onRequestResponse (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:138345:10)
+      at ClientRequest.emit (events.js:187:15)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:555:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:109:17)
+      at Socket.socketOnData (_http_client.js:441:20)
+      at Socket.emit (events.js:182:13)
+
+npm manifest: 
+  {
+    "name": "create-repack-app",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
+      "deploy": "cp -a client/build/. public/",
+      "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
